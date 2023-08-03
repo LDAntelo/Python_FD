@@ -1,0 +1,95 @@
+{% extends "layout.html" %} {% block content %}
+<!--CARROUSEL-->
+<section>
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/img/home/5.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/home/11.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/home/19.jpg" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleRide"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleRide"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<!--MENU-->
+<div class="menu-btn">
+  <i class="fas fa-bars" id="menubtn"></i>
+</div>
+<div class="side-bar">
+  <div class="close-btn">
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="menu">
+    <div class="item">
+      <a class="sub-btn"
+        ><i class="fas fa-table"></i>RAID 2023<i
+          class="fas fa-angle-right dropdown"
+        ></i
+      ></a>
+      <div class="sub-menu">
+        <a href="/casupa" class="sub-item">Casupá</a>
+        <a href="#" class="sub-item">Sub Item 02</a>
+        <a href="#" class="sub-item">Sub Item 03</a>
+        <a href="#" class="sub-item">Sub Item 04</a>
+        <a href="#" class="sub-item">Sub Item 05</a>
+        <a href="#" class="sub-item">Sub Item 06</a>
+      </div>
+    </div>
+    <!--<div class="item">
+      <a class="sub-btn"
+        ><i class="fas fa-table"></i>Table 2
+        <i class="fas fa-angle-right dropdown"></i>
+      </a>
+      <div class="sub-menu">
+        <a href="#" class="sub-item">Sub Item 01</a>
+        <a href="#" class="sub-item">Sub Item 02</a>
+        <a href="#" class="sub-item">Sub Item 03</a>
+        <a href="#" class="sub-item">Sub Item 04</a>
+        <a href="#" class="sub-item">Sub Item 05</a>
+        <a href="#" class="sub-item">Sub Item 06</a>
+      </div>
+    </div>-->
+    <div class="item">
+      <a href="/informacion"><i class="fas fa-info-circle"></i>Información</a>
+    </div>
+  </div>
+</div>
+<!--MAIN ALBUM-->
+<div class="ful-img" id="fulImgBox">
+  <img src="static/img/home/1.jpg" id="fulImg" alt="" />
+  <span onclick="closeImg()">X</span>
+</div>
+<div class="img-gallery" id="album"></div>
+<script>
+  let n = 68; //numero de imagenes
+  let gallery = document.getElementById("album");
+  for (let i = 1; i <= n; i++) {
+    gallery.innerHTML +=
+      '<img src="static/img/home/' +
+      i +
+      '.jpg" onclick="openFulImg(this.src)">';
+  }
+</script>
+{% endblock %}
