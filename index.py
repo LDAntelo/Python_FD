@@ -18,8 +18,6 @@ def casupa():
 def informacion():
     return render_template('informacion.html')
 
-port= 10000
-
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    from waitress import serve
+    serve(app,host="0.0.0.0",port=10000)
