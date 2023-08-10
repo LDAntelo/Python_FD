@@ -18,6 +18,8 @@ def casupa():
 def informacion():
     return render_template('informacion.html')
 
+port= 10000
+
 if __name__ == '__main__':
     app.run(debug=True)
 
