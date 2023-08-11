@@ -17,13 +17,16 @@
       ></a>
       <div class="sub-menu">
         <a href="/casupa" class="sub-item">Casupá</a>
+        <!--
         <a href="#" class="sub-item">Sub Item 02</a>
         <a href="#" class="sub-item">Sub Item 03</a>
         <a href="#" class="sub-item">Sub Item 04</a>
         <a href="#" class="sub-item">Sub Item 05</a>
         <a href="#" class="sub-item">Sub Item 06</a>
+        -->
       </div>
     </div>
+    <!--
     <div class="item">
       <a class="sub-btn"
         ><i class="fas fa-table"></i>Table 2
@@ -37,6 +40,7 @@
         <a href="#" class="sub-item">Sub Item 05</a>
         <a href="#" class="sub-item">Sub Item 06</a>
       </div>
+    -->
     </div>
     <div class="item">
       <a href="/informacion"><i class="fas fa-info-circle"></i>Información</a>
@@ -44,7 +48,7 @@
   </div>
 </div>
 <div class="ful-img" id="fulImgBox">
-  <img src="static/images/casupa/1.jpg" id="fulImg" alt="" />
+  <img src="static/img/casupa/1.jpg" id="fulImg" alt="" />
   <span onclick="closeImg()">X</span>
 </div>
 <div class="contactcard" id="albumdesc">
@@ -62,7 +66,7 @@
 let n = 110; //numero de imagenes
 let gallery = document.getElementById('album') ;
 for (let i = 1; i<= n; i++){
-gallery.innerHTML += '<img src="static/images/casupa/'+ i +'.jpg" onclick="openFulImg(this.src)">';
+gallery.innerHTML += '<img src="static/img/casupa/'+ i +'.jpg" onclick="openFulImg(this.src)">';
 }
 </script>
 {% endblock %}
